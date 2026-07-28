@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instalatérské potřeby AgastPB | Praha</title>
+<meta name="description" content="Instalatérské potřeby AgastPB — prodejna a e-shop s instalatérským sortimentem v Praze. Hodnocení 4,8 z 78 recenzí na Googlu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f2d;
+    --navy-2: #123047;
+    --blue: #2f9bf0;
+    --blue-light: #7fc8ff;
+    --bg: #f5f8fa;
+    --text: #1a2733;
+    --muted: #5c6b78;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  a { color: inherit; }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--white);
+    letter-spacing: 0.2px;
+  }
+
+  .logo span { color: var(--blue-light); }
+
+  .topbar-phone {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .topbar-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy-2);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--white);
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(127, 200, 255, 0.15);
+    color: var(--blue-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .hero p.subtitle {
+    color: #cfe0ee;
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin: 0 auto 22px;
+  }
+
+  .rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--white);
+    color: var(--navy);
+    padding: 10px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+
+  .rating-badge .stars {
+    color: #f5a623;
+    letter-spacing: 1px;
+  }
+
+  .rating-badge .rating-count {
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  .hero-cta {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.98rem;
+  }
+
+  .btn-primary {
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 56px 20px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: var(--muted);
+    max-width: 520px;
+    margin: 0 auto 34px;
+    font-size: 0.98rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 620px) {
+    .services-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (min-width: 900px) {
+    .services-grid { grid-template-columns: 1fr 1fr 1fr; }
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 4px 16px rgba(13, 31, 45, 0.06);
+    border: 1px solid #eaeff2;
+  }
+
+  .service-card .icon {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .service-card p {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  /* HOURS */
+  .hours-section {
+    background: var(--white);
+  }
+
+  .hours-table {
+    max-width: 420px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .hours-table tr {
+    border-bottom: 1px solid #eaeff2;
+  }
+
+  .hours-table td {
+    padding: 12px 8px;
+    font-size: 0.98rem;
+  }
+
+  .hours-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .hours-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    max-width: 420px;
+    margin: 14px auto 0;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--bg);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .contact-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(13, 31, 45, 0.06);
+    border: 1px solid #eaeff2;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.15s ease;
+  }
+
+  .contact-card:hover { transform: translateY(-2px); }
+
+  .contact-card .icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .contact-card p {
+    color: var(--blue);
+    font-weight: 600;
+    font-size: 1.05rem;
+    word-break: break-word;
+  }
+
+  .map-card {
+    grid-column: 1 / -1;
+  }
+
+  .map-card p {
+    color: var(--muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .map-card .link-text {
+    color: var(--blue);
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: #b7c6d3;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.85rem;
+  }
+
+  footer .footer-name {
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  footer .footer-credit {
+    margin-top: 14px;
+    color: #6f8394;
+    font-size: 0.8rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">Instalatérské potřeby <span>AgastPB</span></div>
+    <a class="topbar-phone" href="tel:+420734498242">📞 734 498 242</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">Prodejna instalatérských potřeb · Praha</span>
+    <h1>Instalatérské potřeby AgastPB</h1>
+    <p class="subtitle">Kamenná prodejna a e-shop s instalatérským sortimentem v Praze — vše na jednom místě.</p>
+    <div class="rating-badge">
+      <span class="stars">★★★★★</span>
+      <span>4,8</span>
+      <span class="rating-count">(78 recenzí na Googlu)</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="tel:+420734498242">Zavolat prodejnu</a>
+      <a class="btn btn-outline" href="#kontakt">Kontakt a adresa</a>
+    </div>
+  </div>
+</section>
+
+<section id="sortiment">
+  <div class="container">
+    <h2 class="section-title">Náš sortiment</h2>
+    <p class="section-subtitle">Přehled kategorií zboží, které v prodejně a e-shopu běžně nabízíme.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🚰</div>
+        <h3>Vodovodní baterie</h3>
+        <p>Baterie pro kuchyně, koupelny a sprchové kouty od základních po designové řady.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🚿</div>
+        <h3>Sprchové sety a vaničky</h3>
+        <p>Sprchové sloupy, hlavice, vaničky a příslušenství pro koupelny.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🚽</div>
+        <h3>Sanitární keramika</h3>
+        <p>WC kombi, závěsná WC, umyvadla a doplňková sanitární keramika.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔧</div>
+        <h3>Potrubí a fitinky</h3>
+        <p>Trubky, spojky, armatury a těsnicí materiál pro rozvody vody a topení.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🔥</div>
+        <h3>Ohřívače vody</h3>
+        <p>Bojlery a průtokové ohřívače pro domácnosti i komerční provozy.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">⚙️</div>
+        <h3>Čerpadla a příslušenství</h3>
+        <p>Čerpadla, tlakové nádoby a doplňky pro rozvod vody.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🛁</div>
+        <h3>Radiátory a topení</h3>
+        <p>Topenářský materiál, radiátory a komponenty pro vytápění.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🧰</div>
+        <h3>Nářadí pro instalatéry</h3>
+        <p>Ruční nářadí, spojovací materiál a pomůcky pro montáž.</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">🕳️</div>
+        <h3>Odpadní systémy</h3>
+        <p>Odpadní trubky, sifony a komponenty kanalizačních rozvodů.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hours-section">
+  <div class="container">
+    <h2 class="section-title">Otevírací doba</h2>
+    <table class="hours-table">
+      <tr><td>Pondělí – Pátek</td><td>8:00 – 17:00</td></tr>
+      <tr><td>Sobota</td><td>8:00 – 12:00</td></tr>
+      <tr><td>Neděle</td><td>Zavřeno</td></tr>
+    </table>
+    <p class="hours-note">Orientační otevírací doba — aktuální provozní dobu prosím ověřte telefonicky.</p>
+  </div>
+</section>
+
+<section class="contact-section" id="kontakt">
+  <div class="container">
+    <h2 class="section-title">Kontakt</h2>
+    <p class="section-subtitle">Zavolejte, napište, nebo nás navštivte na prodejně v Praze.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="tel:+420734498242">
+        <div class="icon">📞</div>
+        <h3>Telefon</h3>
+        <p>734 498 242</p>
+      </a>
+      <a class="contact-card" href="mailto:vodovodni-baterie@email.cz">
+        <div class="icon">✉️</div>
+        <h3>E-mail</h3>
+        <p>vodovodni-baterie@email.cz</p>
+      </a>
+      <a class="contact-card map-card" href="https://www.google.com/maps/search/?api=1&query=Instalat%C3%A9rsk%C3%A9+pot%C5%99eby+AgastPB,+Baranova+897%2F19,+Praha" target="_blank" rel="noopener">
+        <div class="icon">📍</div>
+        <h3>Adresa prodejny</h3>
+        <p>Baranova 897/19, 130 00 Praha, Žižkov</p>
+        <p class="link-text">Zobrazit na Google Maps →</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Instalatérské potřeby AgastPB</div>
+  <div>Baranova 897/19, 130 00 Praha, Žižkov · 734 498 242</div>
+  <div class="footer-credit">Ukázka webu — Vladislav Zachariev</div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Instalatérské potřeby AgastPB",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Baranova 897/19, Žižkov",
+    "addressLocality": "Praha",
+    "postalCode": "130 00",
+    "addressCountry": "CZ"
+  },
+  "telephone": "+420734498242",
+  "email": "vodovodni-baterie@email.cz",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "78"
+  }
+}
+</script>
+
+</body>
+</html>
